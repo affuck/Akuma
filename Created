@@ -1,0 +1,52 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Testing", "Ocean")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("NukeVsCity", "Universal Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+end)
+
+MainSection:NewToggle("Super Human", "Fast Walkspeed And JumpPower", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100    
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+MainSection:NewButton("Bedwars", "Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/VeztWare/Vezt/main/Vezt%20-%20Bedwars%20%E2%80%A2%20V2.lua"))()
+end)
+
+
+--LOCAL PLAYER
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("WalkSpeed", "FastAsFuckBoy", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "OMGGG!!", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewButton("Reset Speed", "Resets Speed And Jump", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+
+--OTHER
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Other")
+
+OtherSection:NewButton("Chat Spoofer", "Say coco", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/MdSA4fn5'))()
+end)
