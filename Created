@@ -66,6 +66,6 @@ Section:NewKeybind("Toggle Hack", "Toggles the hack on/off", Enum.KeyCode.F, fun
         
         -- Add your code to enable the hack here
         -- For example:
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/example/hack/main/hack.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/affuck/Akuma/main/Created"))()
     end
 end)
